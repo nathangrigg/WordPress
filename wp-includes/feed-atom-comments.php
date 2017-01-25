@@ -98,7 +98,7 @@ if ( have_comments() ) : while ( have_comments() ) : the_comment();
 <?php if ( post_password_required($comment_post) ) : ?>
 		<content type="html" xml:base="<?php comment_link(); ?>"><![CDATA[<?php echo get_the_password_form(); ?>]]></content>
 <?php else : // post pass ?>
-		<content type="html" xml:base="<?php comment_link(); ?>"><![CDATA[<?php comment_text(); ?>]]></content>
+		<content type="html" xml:base="<?php comment_link(); ?>"><![CDATA[<?php comment_text_rss(); ?>]]></content>
 <?php endif; // post pass
 	// Return comment threading information (https://www.ietf.org/rfc/rfc4685.txt)
 	if ( $comment->comment_parent == 0 ) : // This comment is top level ?>

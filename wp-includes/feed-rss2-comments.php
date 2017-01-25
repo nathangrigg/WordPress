@@ -92,7 +92,7 @@ do_action( 'rss_tag_pre', 'rss2-comments' );
 		<content:encoded><![CDATA[<?php echo get_the_password_form() ?>]]></content:encoded>
 <?php else : // post pass ?>
 		<description><![CDATA[<?php comment_text_rss() ?>]]></description>
-		<content:encoded><![CDATA[<?php comment_text() ?>]]></content:encoded>
+		<content:encoded><![CDATA[<?php comment_text_rss() ?>]]></content:encoded>
 <?php endif; // post pass
 	/**
 	 * Fires at the end of each RSS2 comment feed item.
